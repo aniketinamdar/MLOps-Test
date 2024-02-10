@@ -26,19 +26,26 @@ def index():
             chlorides = float(request.form['chlorides'])
             free_sulfur_dioxide = float(request.form['free_sulfur_dioxide'])
             total_sulfur_dioxide = float(request.form['total_sulfur_dioxide'])
-            desity = float(request.form['desity'])
+            density = float(request.form['density'])
             pH = float(request.form['pH'])
             sulphates = float(request.form['sulphates'])
-            alochol = float(request.form['alcohol'])
+            alcohol = float(request.form['alcohol'])
 
-            data = [fixed_acidity, volatile_acidity,citric_acid,residual_sugar,chlorides,free_sulfur_dioxide,total_sulfur_dioxide,desity,pH,sulphates,alochol]
+            data = [fixed_acidity, volatile_acidity,citric_acid,residual_sugar,chlorides,free_sulfur_dioxide,total_sulfur_dioxide,density,pH,sulphates,alcohol]
             data = np.array(data).reshape(1,11)
 
-            # prediction = PredictionPipeline()
+            prediction = PredictionPipeline()
+            predict = prediction.predict(data)
 
+            return render_template('results.html', prediction = str(predict))
 
+        except Exception as e:
+            print('The Exception message is: ', e)
+            return 'something is wrong'
+    else:
+        return render_template('index.html')
 
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0",port = 8080, debug=True)
+    app.run(host="0.0.0.0", port = 8080 , debug=True)
