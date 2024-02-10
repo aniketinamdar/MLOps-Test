@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Work/MLOps/mlruns/0/f78e133c13ce49559a7cf885be0bc6be/artifacts
+end_time: 1707542889365
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f78e133c13ce49559a7cf885be0bc6be
+run_name: defiant-eel-404
+run_uuid: f78e133c13ce49559a7cf885be0bc6be
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707542886985
+status: 3
+tags: []
+user_id: ANIKET INAMDAR
