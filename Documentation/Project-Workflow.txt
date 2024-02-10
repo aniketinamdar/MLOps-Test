@@ -1,0 +1,56 @@
+Project Workflow
+
+1. Project Directory Setup and Dependencies
+
+Setup: Create a project directory structure using the template.py script.
+Dependencies: Add a requirements.txt file and update the setup.py with necessary dependencies.
+2. Logging Setup
+
+Initialization: Inside the src folder, initialize the __init__.py for logging purposes.
+3. Utilities Setup
+
+Common Functions: In the src/utils folder, create common.py to provide common functionalities, such as reading YAML files across components.
+4. Data Ingestion
+
+Code Development: Develop data ingestion code in the research folder and update config.yaml in the config folder accordingly. Use constants constructor from init.py to read config.yaml.
+Pipeline Integration: After updating the data ingestion code, integrate it into the pipeline by updating various components:
+Update the data ingestion configuration class in the entity folder.
+Update the configuration manager in the config folder.
+Create a data ingestion class in the components folder.
+Develop a data ingestion pipeline stage (stage_01_data_ingestion.py) in the pipeline folder, including error handling and object instantiation for the data ingestion class.
+Main Integration: Add the data ingestion code to main.py in the root folder.
+5. Data Validation
+
+Development: Similar to data ingestion, develop data validation code in the research folder. Perform exploratory data analysis (EDA) and create a data validation configuration, configuration manager, and data validation class.
+Modular Integration: Integrate the data validation code into the pipeline following the modular approach.
+6. Data Transformation
+
+Development: Develop data transformation code, mirroring the steps taken for data ingestion and data validation. Include code for test-train split.
+7. Model Training
+
+Training: Train the model using the prepared data. Follow similar steps as in previous stages.
+8. Model Evaluation
+
+Integration: Integrate MLflow for model evaluation. Follow the established pattern for code development and pipeline integration.
+9. Prediction Pipeline
+
+Pipeline Addition: Add a prediction.py file in the pipeline folder containing the prediction pipeline, including loading the model and generating predictions.
+10. Web Application Development
+
+HTML Templates: Add HTML pages in the templates folder.
+Flask App: Develop the Flask application (app.py) in the root directory.
+11. Docker Setup
+
+Update Dockerfile: Update the Dockerfile to include all necessary dependencies and configurations.
+12. Continuous Integration/Continuous Deployment (CI/CD)
+
+GitHub Actions: Add a main.yaml file in the .github folder containing CI/CD configurations for AWS, Docker, GitHub, and Continuous Deployment Environment (CDE) connections.
+13. AWS Setup
+
+AWS Services: Configure AWS services including Identity and Access Management (IAM), Elastic Container Registry (ECR), and Elastic Compute Cloud (EC2).
+14. GitHub Integration
+
+Key Management: Add necessary keys in GitHub for secure integration with AWS and CI/CD processes.
+15. Finalization
+
+Workflow Documentation: Document the entire workflow for reference and future maintenance.

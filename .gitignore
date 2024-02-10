@@ -163,4 +163,5 @@ cython_debug/
 
 artifacts/*
 
-documentation.txt
+Documentation/documentation.txt
+Documentation/workflow.txt
