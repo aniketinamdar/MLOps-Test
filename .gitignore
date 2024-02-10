@@ -165,5 +165,4 @@ artifacts/*
 
 Documentation/documentation.txt
 Documentation/workflow.txt
-
-.github/
+.github/*
